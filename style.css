@@ -1,0 +1,191 @@
+:root {
+    --bg-main: #f4f3ee;
+    --bg-card: #faf9f5;
+    --text-dark: #33322e;
+    --text-muted: #7c7a75;
+    --accent-green: #e2efda;
+    --border-color: #e6e4de;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 24px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-area h1 {
+    display: inline;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.subtitle { color: var(--text-muted); font-size: 13px; }
+
+.main-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    padding: 16px;
+    gap: 16px;
+}
+
+/* Sidebars */
+aside {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.cell-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cell-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.cell-item.active {
+    background: var(--accent-green);
+    border-color: #bcd4ae;
+}
+
+.cell-name { font-weight: bold; font-size: 14px; }
+.cell-sub { font-size: 11px; color: var(--text-muted); }
+
+/* Center Viewport */
+.center-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.viewer-container {
+    flex: 1;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.viewer-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#canvas-container {
+    flex: 1;
+    position: relative;
+    background: #fdfdfb;
+}
+
+.interaction-tip {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    pointer-events: none;
+}
+
+.canvas-actions {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+/* Cards & Bottom UI */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.bottom-row {
+    display: flex;
+    gap: 16px;
+    height: 160px;
+}
+
+.microscope-card { flex: 2; }
+.compare-card { flex: 1; }
+
+.micro-grid {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.micro-thumb {
+    flex: 1;
+    height: 80px;
+    background: #e2e1da;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-end;
+    padding: 6px;
+    font-size: 11px;
+}
+
+/* Tables and Details */
+.details-table {
+    width: 100%;
+    margin-top: 12px;
+    border-collapse: collapse;
+}
+
+.details-table td {
+    padding: 6px 0;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Simple switch utility */
+.switch { position: relative; display: inline-block; width: 40px; height: 22px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 34px; }
+.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: #76a065; }
+input:checked + .slider:before { transform: translateX(18px); }

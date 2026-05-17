@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell Architecture Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="top-nav">
+            <div class="logo-area">
+                <span class="logo-icon">🔬</span>
+                <h1>Cell Architecture Studio</h1>
+                <span class="subtitle">Explore life at the microscopic level ✨</span>
+            </div>
+            <nav class="nav-links">
+                <button class="nav-btn">Gallery</button>
+                <button class="nav-btn">Library</button>
+                <button class="nav-btn">Notebooks</button>
+                <button class="nav-btn">Settings</button>
+            </nav>
+        </header>
+
+        <div class="main-layout">
+            <aside class="sidebar-left">
+                <div class="section-title">🧬 CELL TYPES</div>
+                <div class="cell-list">
+                    <button class="cell-item active" data-model="plant cell.glb">
+                        <span class="cell-name">Plant Cell</span>
+                        <span class="cell-sub">Eukaryotic Cell</span>
+                    </button>
+                    <button class="cell-item" data-model="white blood cell.glb">
+                        <span class="cell-name">White Blood Cell</span>
+                        <span class="cell-sub">Immune Cell</span>
+                    </button>
+                    <button class="cell-item" data-model="single neuron.glb">
+                        <span class="cell-name">Neuron</span>
+                        <span class="cell-sub">Nerve Cell</span>
+                    </button>
+                    <button class="cell-item" data-model="animal cell.glb">
+                        <span class="cell-name">Animal Cell</span>
+                        <span class="cell-sub">Eukaryotic Cell</span>
+                    </button>
+                    <button class="cell-item" data-model="muscle cell.glb">
+                        <span class="cell-name">Muscle Cell</span>
+                        <span class="cell-sub">Muscle Fiber</span>
+                    </button>
+                </div>
+            </aside>
+
+            <main class="center-content">
+                <div class="viewer-container">
+                    <div class="viewer-header">
+                        <div>
+                            <h2 id="current-cell-title">Plant Cell</h2>
+                            <p id="current-cell-sub" class="subtext">Eukaryotic Cell</p>
+                        </div>
+                        <div class="view-controls">
+                            <span class="control-label">Cross-Section</span>
+                            <label class="switch">
+                                <input type="checkbox" id="cross-section-toggle" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="canvas-container">
+                        <div class="interaction-tip">
+                            Tip: Drag to rotate | Scroll to zoom | Ctrl + drag to pan
+                        </div>
+                    </div>
+
+                    <div class="canvas-actions">
+                        <button id="btn-reset">Reset View</button>
+                        <button id="btn-screenshot">Screenshot</button>
+                    </div>
+                </div>
+
+                <div class="bottom-row">
+                    <div class="card microscope-card">
+                        <h3>MICROSCOPE VIEW ⓘ</h3>
+                        <div class="micro-grid">
+                            <div class="micro-thumb"><span>Light</span></div>
+                            <div class="micro-thumb"><span>Stained</span></div>
+                            <div class="micro-thumb"><span>Electron</span></div>
+                        </div>
+                    </div>
+                    <div class="card compare-card">
+                        <h3>COMPARE CELLS ⓘ</h3>
+                        <div class="compare-btn-wrapper">
+                            <button class="compare-btn">Open Comparison View ❯</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="sidebar-right">
+                <div class="card details-card">
+                    <h3>ORGANELLE DETAILS</h3>
+                    <div class="organelle-header">
+                        <div class="organelle-icon" style="background: #a855f7;"></div>
+                        <div>
+                            <h4>Nucleus</h4>
+                            <p class="subtext">The control center</p>
+                        </div>
+                    </div>
+                    <table class="details-table">
+                        <tr><td>Size</td><td>5 – 10 μm in diameter</td></tr>
+                        <tr><td>Location</td><td>Usually central</td></tr>
+                        <tr><td>Visible in LM</td><td>Yes</td></tr>
+                    </table>
+                </div>
+
+                <div class="card notes-card">
+                    <h3>BIOLOGICAL NOTES</h3>
+                    <p>The nucleus is surrounded by a double membrane called the nuclear envelope, which contains pores that regulate the movement of molecules in and out.</p>
+                    <p class="fun-fact"><em>Fun fact: The nucleus was one of the first cell structures discovered!</em></p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
