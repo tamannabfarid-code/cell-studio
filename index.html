@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell Architecture Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-area">
+                <h1>🔬 Cell Architecture Studio</h1>
+                <span class="tagline">Explore life at the microscopic level ✨</span>
+            </div>
+            <nav class="top-nav">
+                <button class="nav-link">🖼️ Gallery</button>
+                <button class="nav-link active">📚 Library</button>
+                <button class="nav-link">📝 Notebooks</button>
+                <button class="nav-link">⚙️ Settings</button>
+                <button class="account-profile-btn" title="User Account">
+                    <div class="avatar-icon">👤</div>
+                </button>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            
+            <aside class="left-sidebar">
+                <div class="panel-section">
+                    <h3>CELL TYPES</h3>
+                    <ul class="item-list" id="cell-types-list">
+                        <li class="list-item active" data-cell="plant">
+                            <img src="icons/plant-cell.png-59092cf7-94b9-45b8-a943-e0fcc01f8322" alt="Plant Cell">
+                            <div class="item-meta">
+                                <strong>Plant Cell</strong>
+                                <span class="subtext">Eukaryotic Cell</span>
+                            </div>
+                        </li>
+                        <li class="list-item" data-cell="white-blood">
+                            <img src="icons/white-blood-cell.png-1828813d-fd16-4718-9a82-ac9eef0c9b45" alt="White Blood Cell">
+                            <div class="item-meta">
+                                <strong>White Blood Cell</strong>
+                                <span class="subtext">Immune Cell</span>
+                            </div>
+                        </li>
+                        <li class="list-item" data-cell="neuron">
+                            <img src="icons/single-neuron.png-0b95502b-63a9-4e2f-a084-72e119684011" alt="Neuron">
+                            <div class="item-meta">
+                                <strong>Neuron</strong>
+                                <span class="subtext">Nerve Cell</span>
+                            </div>
+                        </li>
+                        <li class="list-item" data-cell="animal">
+                            <img src="icons/animal-cell.png-562addd4-34ba-4c78-86e4-451e98df600c" alt="Animal Cell">
+                            <div class="item-meta">
+                                <strong>Animal Cell</strong>
+                                <span class="subtext">Eukaryotic Cell</span>
+                            </div>
+                        </li>
+                        <li class="list-item" data-cell="muscle">
+                            <img src="icons/muscle-cell.png-1e54f475-0617-4130-942e-380f938cb8b9" alt="Muscle Cell">
+                            <div class="item-meta">
+                                <strong>Muscle Cell</strong>
+                                <span class="subtext">Muscle Fiber</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="panel-section organelles-section">
+                    <h3>ORGANELLES</h3>
+                    <ul class="organelle-list" id="organelle-sub-list">
+                        <li class="organelle-item active-item" data-organelle="nucleus">🟣 Nucleus</li>
+                        <li class="organelle-item" data-organelle="mitochondria">🟠 Mitochondria</li>
+                        <li class="organelle-item" data-organelle="er">🔵 Rough ER</li>
+                        <li class="organelle-item" data-organelle="membrane">🟢 Plasma Membrane</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="center-stage">
+                <div class="title-banner">
+                    <h2 id="current-cell-title">Plant Cell</h2>
+                    <p id="current-cell-subtitle">Eukaryotic Cell</p>
+                </div>
+
+                <div class="viewport-container">
+                    <model-viewer id="cell-3d-model" 
+                        src="3d_models/plant cell.glb" 
+                        camera-controls 
+                        auto-rotate 
+                        shadow-intensity="1.5"
+                        exposure="1.2">
+                    </model-viewer>
+                    
+                    <div class="floating-tip">
+                        <strong>Navigation Controls</strong><br>
+                        • Left Click + Drag: Rotate<br>
+                        • Scroll / Pinch: Zoom<br>
+                        • Ctrl + Drag: Pan Space
+                    </div>
+                </div>
+
+                <div class="viewport-controls">
+                    <button id="btn-rotate" class="control-btn">⏸ Toggle Rotation</button>
+                    <button id="btn-reset" class="control-btn">🔄 Reset Camera View</button>
+                </div>
+            </main>
+
+            <aside class="right-sidebar">
+                <div class="panel-section card">
+                    <h3>ORGANELLE DETAILS</h3>
+                    <div class="organelle-header">
+                        <div class="organelle-indicator-dot"></div>
+                        <div>
+                            <h4 id="organelle-name">Nucleus</h4>
+                            <p class="subtext">Primary Control Center</p>
+                        </div>
+                    </div>
+                    <table class="details-table">
+                        <tbody>
+                            <tr>
+                                <td>Average Size:</td>
+                                <td id="info-size">5 - 10 μm in diameter</td>
+                            </tr>
+                            <tr>
+                                <td>Cellular Position:</td>
+                                <td id="info-location">Usually central position</td>
+                            </tr>
+                            <tr>
+                                <td>Visible in LM:</td>
+                                <td id="info-lm">Yes (Highly Distinct)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="panel-section card notes-card">
+                    <h3>BIOLOGICAL NOTES</h3>
+                    <div class="notes-body">
+                        <p id="bio-notes-text">The nucleus is surrounded by a complex double membrane called the nuclear envelope, which contains intricate pore complexes that systematically regulate macromolecule distribution.</p>
+                    </div>
+                </div>
+
+                <div class="panel-section card occurrence-card">
+                    <h3>WHERE IT OCCURS</h3>
+                    <div class="occurrence-display">
+                        <img id="occurrence-img" src="where_they_occur/root plant cell.png-e14fbc23-f9e2-45fb-acc8-cc3930048814" alt="Plant Location Overview">
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="bottom-shelf">
+            <div class="bottom-panel microscope-views">
+                <h4>MICROSCOPE EXTRACTION VIEWS</h4>
+                <div class="micro-grid">
+                    <div class="thumb micro-lm"><span class="label">Light Microscope</span></div>
+                    <div class="thumb micro-stained"><span class="label">Stained Phase</span></div>
+                    <div class="thumb micro-tem"><span class="label">Electron (TEM) Scan</span></div>
+                </div>
+            </div>
+            
+            <div class="bottom-panel compare-tool">
+                <h4>COMPARE SYSTEM METRICS</h4>
+                <div class="compare-preview-area">
+                    <div class="compare-box">
+                        <img id="compare-current-img" src="icons/plant-cell.png-59092cf7-94b9-45b8-a943-e0fcc01f8322" alt="Selected Target">
+                        <span id="compare-current-name" class="comp-name">Plant Cell</span>
+                    </div>
+                    <div class="vs-divider">VS</div>
+                    <div class="compare-box">
+                        <img id="compare-versus-img" src="icons/animal-cell.png-562addd4-34ba-4c78-86e4-451e98df600c" alt="Opponent">
+                        <span id="compare-versus-name" class="comp-name">Animal Cell</span>
+                    </div>
+                </div>
+                <button class="compare-btn">Execute Deep Comparison View ❯</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
