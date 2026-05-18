@@ -86,6 +86,9 @@ listItems.forEach(item => {
             textSubtitle.textContent = record.subtitle;
             model3DViewer.setAttribute('src', record.modelPath);
             imageOccurrencePanel.setAttribute('src', record.occurrenceImg);
+            model3DViewer.setAttribute('src', record.modelPath);
+            imageOccurrencePanel.setAttribute('src', record.occurrenceImg);
+            imageMicroscopePanel.setAttribute('src', record.microImg);
             
             textOrganelleName.textContent = record.organelle;
             textMetricSize.textContent = record.size;
