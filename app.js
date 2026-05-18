@@ -1,48 +1,48 @@
 const cellDatabase = {
     plant: {
         title: "Plant Cell", subtitle: "Eukaryotic Cell",
-        iconPath: "icons/plant-cell.png-59092cf7-94b9-45b8-a943-e0fcc01f8322",
-        modelPath: "3d_models/plant cell.glb",
-        occurrenceImg: "where_they_occur/root plant cell.png-e14fbc23-f9e2-45fb-acc8-cc3930048814",
+        iconPath: "plant-cell.png",
+        modelPath: "plant cell.glb",
+        occurrenceImg: "root plant cell.png",
         organelle: "Nucleus", size: "5 - 10 μm in diameter", location: "Usually central position", lmVisible: "Yes",
         notes: "The nucleus is surrounded by a complex double membrane called the nuclear envelope, which contains intricate pore complexes that systematically regulate macromolecule distribution.",
-        versusCell: { name: "Animal Cell", icon: "icons/animal-cell.png-562addd4-34ba-4c78-86e4-451e98df600c" }
+        versusCell: { name: "Animal Cell", icon: "animal-cell.png" }
     },
     "white-blood": {
         title: "White Blood Cell", subtitle: "Immune System Cell",
-        iconPath: "icons/white-blood-cell.png-1828813d-fd16-4718-9a82-ac9eef0c9b45",
-        modelPath: "3d_models/white blood cell.glb", 
-        occurrenceImg: "where_they_occur/root white blood cell.png-3fe3de70-50f0-4889-b9ac-f1a1bf5749bb",
+        iconPath: "white-blood-cell.png",
+        modelPath: "white blood cell.glb", 
+        occurrenceImg: "root white blood cell.png",
         organelle: "Lysosome", size: "0.1 - 1.2 μm", location: "Scattered throughout cytoplasm", lmVisible: "No",
         notes: "Highly abundant inside active immune variants to efficiently support the rapid chemical enzymatic breakdown of captured biological pathogens via phagocytosis processes.",
-        versusCell: { name: "Plant Cell", icon: "icons/plant-cell.png-59092cf7-94b9-45b8-a943-e0fcc01f8322" }
+        versusCell: { name: "Plant Cell", icon: "plant-cell.png" }
     },
     neuron: {
         title: "Neuron", subtitle: "Specialized Nerve Cell",
-        iconPath: "icons/single-neuron.png-0b95502b-63a9-4e2f-a084-72e119684011",
-        modelPath: "3d_models/single neuron.glb",
-        occurrenceImg: "where_they_occur/root single neuron cell.png-b1e2b474-5886-4235-83ee-1a991f783f23",
+        iconPath: "single-neuron.png",
+        modelPath: "single neuron.glb",
+        occurrenceImg: "root single neuron cell.png",
         organelle: "Soma (Cell Body Framework)", size: "4 - 100 μm variable", location: "Integrated neural connection networks", lmVisible: "Yes",
         notes: "The complex elongated dendritic and axonal structural architecture facilitates rapid electrochemical polarization transmission across long spatial pathways.",
-        versusCell: { name: "Muscle Cell", icon: "icons/muscle-cell.png-1e54f475-0617-4130-942e-380f938cb8b9" }
+        versusCell: { name: "Muscle Cell", icon: "muscle-cell.png" }
     },
     animal: {
         title: "Animal Cell", subtitle: "Eukaryotic Cell",
-        iconPath: "icons/animal-cell.png-562addd4-34ba-4c78-86e4-451e98df600c",
-        modelPath: "3d_models/animal cell.glb",
-        occurrenceImg: "where_they_occur/root animal cell.png-81284668-ce64-4334-b114-43f1a0ad7b6f",
+        iconPath: "animal-cell.png",
+        modelPath: "animal cell.glb",
+        occurrenceImg: "root animal cell.png",
         organelle: "Mitochondria", size: "0.5 - 10 μm average width", location: "Dispersed throughout cellular cytoplasm", lmVisible: "With Staining",
         notes: "Functions as the metabolic generator of the cell's energetic infrastructure, actively generating Adenosine Triphosphate (ATP) compounds via oxygen synthesis channels.",
-        versusCell: { name: "Plant Cell", icon: "icons/plant-cell.png-59092cf7-94b9-45b8-a943-e0fcc01f8322" }
+        versusCell: { name: "Plant Cell", icon: "plant-cell.png" }
     },
     muscle: {
         title: "Muscle Cell", subtitle: "Contractile Muscle Fiber",
-        iconPath: "icons/muscle-cell.png-1e54f475-0617-4130-942e-380f938cb8b9",
-        modelPath: "3d_models/muscle cell.glb",
-        occurrenceImg: "where_they_occur/root human cell.png-2bf579eb-de69-44b5-9134-3d98d77c96ca",
+        iconPath: "muscle-cell.png",
+        modelPath: "muscle cell.glb",
+        occurrenceImg: "root human cell.png",
         organelle: "Myofibril Complexes", size: "10 - 100 μm cross-width", location: "Spatially aligned along major tissue axis", lmVisible: "Yes",
         notes: "Interlaced with specialized dense bands of actin and myosin protein blocks designed to slide past one another to generate linear structural muscle contraction forces.",
-        versusCell: { name: "Neuron", icon: "icons/single-neuron.png-0b95502b-63a9-4e2f-a084-72e119684011" }
+        versusCell: { name: "Neuron", icon: "single-neuron.png" }
     }
 };
 
@@ -98,7 +98,7 @@ listItems.forEach(item => {
 organelleItems.forEach(item => {
     item.addEventListener('click', () => {
         organelleItems.forEach(el => el.classList.remove('active-item'));
-        item.classList.add('active-item');
+        item.clusterList = item.classList.add('active-item');
     });
 });
 
