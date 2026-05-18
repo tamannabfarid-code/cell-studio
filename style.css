@@ -31,7 +31,6 @@ body {
     gap: 15px;
 }
 
-/* HEADER WITH ACCOUNT ACCENTS */
 .app-header {
     display: flex;
     justify-content: space-between;
@@ -60,7 +59,6 @@ body {
     color: var(--text-main);
 }
 
-/* ACCOUNT AVATAR SPHERE ELEMENT */
 .account-profile-btn {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -80,7 +78,6 @@ body {
     background: var(--accent-color);
 }
 
-/* MASTER CONTAINER THREE-COLUMN PANELS GRID */
 .main-content {
     display: grid;
     grid-template-columns: 280px 1fr 340px;
@@ -89,7 +86,6 @@ body {
     overflow: hidden;
 }
 
-/* LEFT COLUMN SUB-LAYOUT STRUCTURE */
 .left-sidebar {
     display: flex;
     flex-direction: column;
@@ -132,7 +128,6 @@ body {
 .item-meta strong { font-size: 0.85rem; display: block; }
 .subtext { font-size: 0.75rem; color: var(--text-muted); }
 
-/* RE-INTEGRATED ORGANELLE SELECTION STYLES */
 .organelles-section {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -155,7 +150,6 @@ body {
 .organelle-item:hover { background-color: #fcfbf9; }
 .organelle-item.active-item { background-color: #f0edf5; color: #5b4182; }
 
-/* CENTER VIEWPORT STYLES */
 .center-stage { display: flex; flex-direction: column; overflow: hidden; }
 .title-banner { margin-bottom: 8px; }
 .title-banner h2 { font-size: 1.6rem; font-weight: 700; }
@@ -196,7 +190,6 @@ body {
     cursor: pointer;
 }
 
-/* RIGHT PANEL DATAFRAME LAYOUT */
 .right-sidebar { display: flex; flex-direction: column; gap: 15px; overflow-y: auto; }
 .organelle-header { display: flex; align-items: center; gap: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border-color); }
 .organelle-indicator-dot { width: 10px; height: 10px; background: #a389cc; border-radius: 50%; }
@@ -204,9 +197,9 @@ body {
 .details-table td { padding: 4px 0; }
 .details-table td:first-child { color: var(--text-muted); font-weight: 600; width: 40%; }
 .notes-body { font-size: 0.85rem; line-height: 1.4; color: #4a413a; }
+.occurrence-display { display: flex; justify-content: center; align-items: center; }
 .occurrence-display img { width: 100%; height: auto; max-height: 115px; object-fit: contain; border-radius: 6px; }
 
-/* BOTH DOUBLE FOOTER PANELS SYNCED UP */
 .bottom-shelf {
     display: grid;
     grid-template-columns: 1fr 380px;
@@ -220,7 +213,6 @@ body {
 .thumb { flex: 1; height: 65px; border-radius: 8px; position: relative; background-color: #e8e4d9; border: 1px solid var(--border-color); }
 .thumb .label { position: absolute; bottom: 6px; left: 6px; font-size: 0.65rem; font-weight: bold; background: rgba(255,255,255,0.9); padding: 2px 6px; border-radius: 4px; }
 
-/* COMPARE SYSTEMS INTERFACE STYLING */
 .compare-preview-area { display: flex; align-items: center; justify-content: space-around; background: #fbf9f4; border: 1px dashed var(--border-color); border-radius: 10px; padding: 6px; margin-bottom: 6px;}
 .compare-box { display: flex; align-items: center; gap: 6px; }
 .compare-box img { width: 28px; height: 28px; object-fit: contain; }
