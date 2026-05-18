@@ -58,6 +58,8 @@ const model3DViewer = document.getElementById('cell-3d-model');
 const textMainTitle = document.getElementById('current-cell-title');
 const textSubtitle = document.getElementById('current-cell-subtitle');
 const imageOccurrencePanel = document.getElementById('occurrence-img');
+const imageOccurrencePanel = document.getElementById('occurrence-img');
+const imageMicroscopePanel = document.getElementById('microscope-view-img');
 
 const textOrganelleName = document.getElementById('organelle-name');
 const textMetricSize = document.getElementById('info-size');
