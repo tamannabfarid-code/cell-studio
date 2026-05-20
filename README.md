@@ -5,7 +5,7 @@ Welcome to the Cell Architecture Studio! This is an interactive, web-based 3D bi
 ---
 
 ## 🚀 Live Demo
-👉 **[CLICK HERE TO VIEW YOUR LIVE STUDIO SITE](PASTE_YOUR_GITHUB_PAGES_LINK_HERE)**
+👉 **[CLICK HERE TO VIEW YOUR LIVE STUDIO SITE]https://tamannabfarid-code.github.io/cell-studio/**
 
 ---
 
